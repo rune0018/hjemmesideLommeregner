@@ -6,6 +6,7 @@ let storedvalues = [0,0]
 let lastoberation = ""
 let safeoutput = null
 var results = []
+var offset = 0;
 
 function pressedvalue(value) {
     safeoutput = safeoutput + value + ""
@@ -123,6 +124,37 @@ function equals() {
     safeoutput = null
     document.getElementById("output").innerHTML = output
     results.push(output)
+    showresults()
     output = ""
     indeks = 0
+    lastoberation = null
+}
+function showresults() {
+    document.getElementById("results").innerHTML = ""
+
+    for (let i = 0; i < results.length && i+offset<results.length && i<5; i++) {
+        document.getElementById("results").innerHTML = document.getElementById("results").innerHTML + results[i + offset] + "<br />"
+    }
+}
+function scroolUp() {
+    if (offset > 0) {
+        offset--
+        showresults()
+    }
+}
+function scroolDown() {
+    if (offset < results.length-1) {
+        offset++
+        showresults()
+    }
+}
+function getTopresult() {
+    if (storedvalues[0] == null) {
+        storedvalues[0] = results[offset]
+        output = storedvalues[0] + ""
+    } else if(lastoberation != null){
+        storedvalues[1] = parseFloat(storedvalues[1] + results[offset] + "")
+        output = output + storedvalues[1]
+    }
+    document.getElementById("output").innerHTML = output
 }

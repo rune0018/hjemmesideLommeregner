@@ -53,6 +53,7 @@ anvende den korte syntaks vist på siden her =>
                 <input type="button" value="4" onclick="pressedvalue(4)"/>
                 <input type="button" value="5" onclick="pressedvalue(5)"/>
                 <input type="button" value="6" onclick="pressedvalue(6)"/>
+                <input type="button" value="%" onclick="modulos()" />
             </td>
         </tr>
         <tr>
@@ -70,6 +71,11 @@ anvende den korte syntaks vist på siden her =>
             </td>
         </tr>
     </table>
+    <p>Results:</p>
+    <input type="button" value="scroolup" onclick="scroolUp()" />
+    <input type="button" value="scrooldown" onclick="scroolDown()" />
+    <input type="button" value="gettopResult" onclick="getTopresult()" />
+    <p id="results"></p>
     <div id="TestDiv">TestDiv</div>
 </body>
 
