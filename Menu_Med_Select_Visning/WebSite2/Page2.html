@@ -1,0 +1,79 @@
+﻿<!DOCTYPE html>
+
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>Page 2</title>
+    <script src="Scripts/jquery-3.0.0.min.js"></script>
+    <link href="CSS/StyleSheet.css" rel="stylesheet" />
+</head>
+
+<!--Hvis man på sin HTML side "kun" skal kalde én 
+    jQuery funktion, kan man i stedet for syntaksen 
+    anvendt på de andre sider :
+<script type="text/javascript">
+    $(document).ready(function () {
+        MakeTopMenuBar();
+    });
+</script>
+
+eller
+
+<script type="text/javascript">
+    $(document).ready(MakeTopMenuBar());
+</script>
+
+anvende den korte syntaks vist på siden her => 
+    <body onload="MakeTopMenuBar();">-->
+
+<body onload="MakeTopMenuBar();">
+   
+    <p>Nu er vi på side 2 !!!</p>
+    <p id="output"></p>
+    <table>
+        <tr>
+            <td>
+                <input type="button" value="+" onclick="add()"/>
+                <input type="button" value="-" onclick="subtract()"/>
+                <input type="button" value="*" onclick="multiply()"/>
+                <input type="button" value="CE" onclick="clearall()"/>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <input type="button" value="7" onclick="pressedvalue(7)"/>
+                <input type="button" value="8" onclick="pressedvalue(8)"/>
+                <input type="button" value="9" onclick="pressedvalue(9)"/>
+                <input type="button" value="/" onclick="devide()"/>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <input type="button" value="4" onclick="pressedvalue(4)"/>
+                <input type="button" value="5" onclick="pressedvalue(5)"/>
+                <input type="button" value="6" onclick="pressedvalue(6)"/>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <input type="button" value="1" onclick="pressedvalue(1)"/>
+                <input type="button" value="2" onclick="pressedvalue(2)"/>
+                <input type="button" value="3" onclick="pressedvalue(3)"/>
+                <input type="button" value="=" onclick="equals()" />
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <input type="button" value="0" onclick="pressedvalue(0)" />
+                <input type="button" value=". " onclick="pressedvalue('.')" />
+            </td>
+        </tr>
+    </table>
+    <div id="TestDiv">TestDiv</div>
+</body>
+
+</html>
+<script src="ScriptFiles/lommeregner.js"></script>
+<script src="ScriptFiles/MenuBar.js"></script>
+
